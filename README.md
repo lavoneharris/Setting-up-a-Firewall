@@ -25,7 +25,7 @@
 <h2>Utilities Used:</h2>
 - Oracle Virtual Box <br>
 - pfSense Community Edition <br>
-- 7Zip <br>
+
 
 
 
@@ -44,8 +44,8 @@ We will be using a virtual machine that will act as Firewall <br/>
 <br />
 <br />
  <p align="center">
-2. Once the .iso file is downloaded we will need to unzip it to access the .iso file (IF NEEDED). You can use the program 7Zip to extract the files. Link:https://www.7-zip.org/download.html  <br/>
-<img src="185.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+2. Once the .iso.gz file is downloaded we will need to zip it by senidng it to acompressed folder , then unzip it  to access the .iso file .  <br/>
+<img src="192,195,194,193.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
 <br />
 <br />
 Download Oracle Virtual Box. Choose Appropriate Platform Packages. Link:https://virtualbox.org/wiki/Downloads  <br/>
@@ -74,4 +74,8 @@ Download Oracle Virtual Box. Choose Appropriate Platform Packages. Link:https://
   <img src=" mac screenshot.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
     <img src=" .png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
-<br />   
+<br /> 
+ 8. Follow the steps to insall pfsense.
+      <img src=" .png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+<br />
+<br /> 
