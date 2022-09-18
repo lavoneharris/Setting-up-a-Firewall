@@ -53,7 +53,7 @@ Application-Level Gateway Disadvantages:<br />
 2. Costlier than some other firewall options. <br />
 3. Requires a high degree of effort to derive the maximum benefit from the gateway. <br />
 4. Doesn't work with all network protocols. <br />
-
+<br />
 4. Stateful Inspection Firewall <br />
 State-aware devices not only examine each packet, but also keep track of whether or not that packet is part of an established TCP or other network session. This offers more security than either packet filtering or circuit monitoring alone but exacts a greater toll on network performance. A further variant of stateful inspection is the multilayer inspection firewall, which considers the flow of transactions in process across multiple protocol layers of the seven-layer Open Systems Interconnection (OSI) model.<br />
 Stateful inspection Firewall Advantages:<br />
@@ -65,7 +65,7 @@ Stateful inspection Firewall Disadvantages:<br />
 1. Resource-intensive and interferes with the speed of network communications. <br />
 2. More expensive than other firewall options. <br />
 3. Doesn't provide authentication capabilities to validate traffic sources aren't spoofed. <br />
-
+<br />
 5. Next-Generation Firewall (NGFW)<br />
 A typical NGFW combines packet inspection with stateful inspection and also includes some variety of deep packet inspection (DPI), as well as other network security systems, such as an IDS/IPS, malware filtering and antivirus.While packet inspection in traditional firewalls looks exclusively at the protocol header of the packet, DPI looks at the actual data the packet is carrying. A DPI firewall tracks the progress of a web browsing session and can notice whether a packet payload, when assembled with other packets in an HTTP server reply, constitutes a legitimate HTML-formatted response.<br />
 NGFW Advantages:<br />
