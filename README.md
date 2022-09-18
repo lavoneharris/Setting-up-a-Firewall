@@ -101,7 +101,7 @@ We will be using a virtual machine that will act as Firewall <br/>
   <br/>
   <br/>
  1. Head to the pfSense website and download the pfSense Community Edition the ISO file in the below picture. Link:https://www.pfsense.org/download/<br/>
-<img src="184.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+<img src="https://imgur.com/T1Aosof.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
 <br />
 <br />
  <p align="center">
