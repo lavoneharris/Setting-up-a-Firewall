@@ -30,7 +30,7 @@ Packet Filtering Firewall Disadvantages:
 2. Doesn't check the payload and can be easily spoofed
 3. Not an ideal option for every network
 4. Access control lists can be difficult to set up and manage
-
+<br />
 2. Circuit-Level Gateway
 Using another relatively quick way to identify malicious content, circuit-level gateways monitor TCP handshakes and other network protocol session initiation messages across the network as they are established between the local and remote hosts to determine whether the session being initiated is legitimate -- whether the remote system is considered trusted. They don't inspect the packets themselves, however.
 Circuit-Level Gateway Advantages:
