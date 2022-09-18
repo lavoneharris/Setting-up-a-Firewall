@@ -1,4 +1,3 @@
-# Setting-up-a-Firewall
 <h1>Setting up a Firewall Lab</h1>
 
 
