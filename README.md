@@ -19,12 +19,12 @@ A firewall can be hardware, software, software-as-a service (SaaS), public cloud
 
 <h2>Types of Firewalls:</h2>
 1. Packet Filtering Firewall
-Packet filtering firewalls operate inline at junction points where devices such as routers and switches do their work. However, these firewalls don't route packets; rather they compare each packet received to a set of established criteria, such as the allowed IP addresses, packet type, port number and other aspects of the packet protocol headers. Packets that are flagged as troublesome are, generally speaking, unceremoniously dropped -- that is, they are not forwarded and, thus, cease to exist.
-Packet Filtering Firewall Advantages:
+Packet filtering firewalls operate inline at junction points where devices such as routers and switches do their work. However, these firewalls don't route packets; rather they compare each packet received to a set of established criteria, such as the allowed IP addresses, packet type, port number and other aspects of the packet protocol headers. Packets that are flagged as troublesome are, generally speaking, unceremoniously dropped -- that is, they are not forwarded and, thus, cease to exist.<br />
+Packet Filtering Firewall Advantages:<br />
 1. A single device can filter traffic for the entire network
 2. Extremely fast and efficient in scanning traffic
 3. Inexpensive
-4. Minimal effect on other resources, network performance and end-user experience
+4. Minimal effect on other resources, network performance and end-user experience <br />
 Packet Filtering Firewall Disadvantages:
 1. Because traffic filtering is based entirely on IP address or port information, packet filtering lacks broader context that informs other types of firewalls
 2. Doesn't check the payload and can be easily spoofed
