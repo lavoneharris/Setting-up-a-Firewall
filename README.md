@@ -41,7 +41,7 @@ Circuit-Level Gateway Disadvantages:<br />
 1. If they aren't used in conjunction with other security technology, circuit-level gateways offer no protection against data leakage from devices within the firewall. <br />
 2. No application layer monitoring. <br />
 3. Requires ongoing updates to keep rules current. <br />
-
+<br />
 3. Application-Level Gateway (aka Proxy Firewall)<br />
 This kind of device, technically a proxy and sometimes referred to as a proxy firewall functions as the only entry point to and exit point from the network. Application-level gateways filter packets not only according to the service for which they are intended -- as specified by the destination port  but also by other characteristics, such as the HTTP request string.While gateways that filter at the application layer provide considerable data security, they can dramatically affect network performance and can be challenging to manage.<br />
 Application-Level Gateway Advantages:<br />
