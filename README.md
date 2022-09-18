@@ -18,18 +18,18 @@ A firewall can be hardware, software, software-as-a service (SaaS), public cloud
 
 
 <h2>Types of Firewalls:</h2>
-1. Packet Filtering Firewall
+1. Packet Filtering Firewall<br />
 Packet filtering firewalls operate inline at junction points where devices such as routers and switches do their work. However, these firewalls don't route packets; rather they compare each packet received to a set of established criteria, such as the allowed IP addresses, packet type, port number and other aspects of the packet protocol headers. Packets that are flagged as troublesome are, generally speaking, unceremoniously dropped -- that is, they are not forwarded and, thus, cease to exist.<br />
 Packet Filtering Firewall Advantages:<br />
-1. A single device can filter traffic for the entire network
-2. Extremely fast and efficient in scanning traffic
-3. Inexpensive
+1. A single device can filter traffic for the entire network <br />
+2. Extremely fast and efficient in scanning traffic <br />
+3. Inexpensive <br />
 4. Minimal effect on other resources, network performance and end-user experience <br />
-Packet Filtering Firewall Disadvantages:
-1. Because traffic filtering is based entirely on IP address or port information, packet filtering lacks broader context that informs other types of firewalls
-2. Doesn't check the payload and can be easily spoofed
-3. Not an ideal option for every network
-4. Access control lists can be difficult to set up and manage
+Packet Filtering Firewall Disadvantages:<br />
+1. Because traffic filtering is based entirely on IP address or port information, packet filtering lacks broader context that informs other types of firewalls. <br />
+2. Doesn't check the payload and can be easily spoofed. <br />
+3. Not an ideal option for every network. <br />
+4. Access control lists can be difficult to set up and manage. <br />
 <br />
 2. Circuit-Level Gateway
 Using another relatively quick way to identify malicious content, circuit-level gateways monitor TCP handshakes and other network protocol session initiation messages across the network as they are established between the local and remote hosts to determine whether the session being initiated is legitimate -- whether the remote system is considered trusted. They don't inspect the packets themselves, however.
