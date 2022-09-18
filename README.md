@@ -105,7 +105,10 @@ We will be using a virtual machine that will act as Firewall <br/>
 <br />
 <br />
  <p align="center">
-2. Once the .iso.gz file is downloaded we will need to zip it by senidng it to acompressed folder , then unzip it  to access the .iso file .  <br/>
+2. Once the .iso.gz file is downloaded we will need to unzip it using 7 Zip File Manager to access the .iso file .  <br/>
+<img src="https://imgur.com/LO2LAUP.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+<img src="https://imgur.com/oKtsFG1.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+<img src="https://imgur.com/3hgqElk.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
 <img src="192,195,194,193.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
 <br />
 <br />
@@ -114,20 +117,20 @@ Download Oracle Virtual Box. Choose Appropriate Platform Packages. Link:https://
 <br />
 <br />
  3. Open VirtualBox and Click the New Icon. <br/> 
-<img src=" https://imgur.com/a8VV8Zu.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+<img src="https://imgur.com/a8VV8Zu.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
 <br /> 
  4. Name the Vitual Machine, Make the type BSD and set version to FreeBSD 64 bit. We can set the Memory Size to default 1024 MB. Set option of Hard Disk to Create Virtual Disk Now.-> Create
- <img src=" 187.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+ <img src="https://imgur.com/7bnOG2C.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
 <br /> 
  5. Set Hard Disk File Type to VDI (VirtualBox Disk Image) -> Create
-  <img src=" 189.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+  <img src="https://imgur.com/eD3f4tO.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
 <br /> 
- 6. Go to settings icon of the Firewall Lab. We set the the VM to Bridge Networkmode to ensure the system has its own IP address vs sharing its IP with my host machine. In Network Tab set Attached to: Bridged Adpater. 
-  <img src=" 190.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
-    <img src=" 191.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+ 6. Go to settings icon of the Firewall Lab. We set the the VM to Bridge Network mode to ensure the system has its own IP address vs sharing its IP with my host machine. In Network Tab set Attached to: Bridged Adpater. 
+  <img src="https://imgur.com/RBN2RnI.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+    <img src="https://imgur.com/4S8LKXz.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
 <br /> 
  7. Run the Firewall Lab by double clicking it to run. A window to setup the .iso disk we want to use will appear we will choose pfsense file we downloaded earlier. 
