@@ -135,11 +135,13 @@ Download Oracle Virtual Box. Choose Appropriate Platform Packages. Link:https://
 <br /> 
  7. Run the Firewall Lab by double clicking it to run. A window to setup the .iso disk we want to use will appear we will choose pfsense file we downloaded earlier. 
 
-  <img src=" mac screenshot.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
-    <img src=" .png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+  <img src="https://imgur.com/05DYmN6.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
 <br /> 
  8. Follow the steps to insall pfsense.
-      <img src=" .png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+      <img src="https://imgur.com/bFp1LU4.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+      <img src="https://imgur.com/V7pUXia.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+      <img src="https://imgur.com/fuSn8B6.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+      <img src="https://imgur.com/GkShdh6.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
 <br /> 
