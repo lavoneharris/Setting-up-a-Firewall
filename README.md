@@ -188,7 +188,7 @@ Download Oracle Virtual Box. Choose Appropriate Platform Packages. Link:https://
 <br />
  Properties we set Creating a rule.<br />
 
- Action </strong> <br />
+ Action</em><br />
 There are three actions we can take with our firewall rules:<br />
 Pass: Allow the traffic to pass through the firewall.<br />
 Block: Prevents the traffic from passing through the firewall by dropping the connection, and not notifying the source IP (known as silent dropping).<br />
