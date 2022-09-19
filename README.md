@@ -145,3 +145,45 @@ Download Oracle Virtual Box. Choose Appropriate Platform Packages. Link:https://
       <img src="https://imgur.com/GkShdh6.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
 <br /> 
+<br /> 
+9.Once the installation is done we will have to shut down the virtual machine. Not doing so would make the VM to run the installer again. To stop this, we need to open the Oracle VirtualbOX Firewall virtual machine settings and remove the .iso file we used for installation. 
+ <img src="https://imgur.com/FE89Cxg.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+ <img src="https://imgur.com/cLadsMK.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+<br />
+<br /> 
+10. Restart the Vm.
+11. select option 1 and when asked “Should VLANs be set up now?” type “n”.
+  <img src="https://imgur.com/UPQw36X.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+<br />
+<br /> 
+12. enter a WAN interface name, enter “em0”, and when asked to enter the LAN interface name, don’t enter anything and press Enter. When asked to remove the LAN IP address, type “y”.
+      <img src="https://imgur.com/YJqjB2p.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+
+<br />
+<br /> 
+   13. Note the IP address for pfsense ”.
+      <img src="https://imgur.com/SJpvAmf.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+<br />
+<br /> 
+   14. Enter the IP address into your host system in your web broswer to get pfsense login portal.Use the username:admin and the password:pfsense to log into the management console.
+      <img src="https://imgur.com/9aRvMHs.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+<br />
+<br /> 
+ 15. Follow the configuration wizard and configure as shown below.
+         <img src="https://imgur.com/KjSe6Hi.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+       <img src="https://imgur.com/wRt6hlz.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+       <img src="https://imgur.com/Ozb3Qej.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+       <img src="https://imgur.com/8qWTKR2.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+       <img src="https://imgur.com/kfhQgCi.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+       <img src="https://imgur.com/K7YuKaF.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+       <img src="https://imgur.com/srYSMXr.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+       <img src="https://imgur.com/IO15fmt.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+       <img src="https://imgur.com/xRFCYbx.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>   
+       <img src="https://imgur.com/I74U2HL.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+       <img src="https://imgur.com/mOrK2PJ.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>   
+       <img src="https://imgur.com/T7L387Y.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
+<br />
+<br /> 
+ 
+ 
+   
