@@ -184,6 +184,29 @@ Download Oracle Virtual Box. Choose Appropriate Platform Packages. Link:https://
        <img src="https://imgur.com/T7L387Y.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
 <br /> 
- 
- 
+ <h2>Set Firewall Rules</h2>
+<br />
+ Properties we set Creating a rule.<br />
+
+ Action<br />
+There are three actions we can take with our firewall rules:<br />
+Pass: Allow the traffic to pass through the firewall.<br />
+Block: Prevents the traffic from passing through the firewall by dropping the connection, and not notifying the source IP (known as silent dropping).<br />
+Reject: Prevents the traffic from passing through the firewall by dropping the connection, and informing the source IP.<br />
+Disabled<br />
+Ticking this box will disable the rule, meaning that it is not actively used by the firewall, but the rule is not deleted so it can be enabled in the future.<br />
+Interface <br />
+Choose the interface from which packets must come to match this rule. For this walkthrough, we only have a WAN interface configured.<br />
+Address Family<br />
+Choose whether the rule applies to IPv4 traffic, IPv6 traffic, or both.<br />
+Protocol<br />
+Which protocol this rule applies to. For example, we could block TCP traffic but allow UDP traffic. We can also choose to use Any protocol, instead of a specific one.<br />
+Source<br />
+The source of the network connection the rule will apply to. For example, if we wanted to block connections to Facebook from this network, the source value would be 192.168.1.0/24, with a destination value of Facebook’s IP range.<br />
+Destination<br />
+The destination of the network connection the rule will apply to. See the example under the Source heading to understand what this means.<br />
+Log<br />
+We can optionally log traffic that matches this rule. If we were blocking connection to Facebook, we could log when this rule is enforced, allowing us to identify which hosts are attempting to connect to Facebook. In an enterprise, we would push these logs to a SIEM platform for centralized management and alerting.<br />
+Description <br />
+We can assign a description for this rule. This is a good idea when working in teams, so that other team members can understand what this rule does, and what it’s being used for.<br />
    
