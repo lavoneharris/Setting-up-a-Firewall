@@ -202,3 +202,41 @@ There are three actions we can take with our firewall rules:<br />
 <strong>Log:</strong>We can optionally log traffic that matches this rule. If we were blocking connection to Facebook, we could log when this rule is enforced, allowing us to identify which hosts are attempting to connect to Facebook. In an enterprise, we would push these logs to a SIEM platform for centralized management and alerting.<br />
 <strong>Description:</strong>We can assign a description for this rule. This is a good idea when working in teams, so that other team members can understand what this rule does, and what it’s being used for.<br />
    
+
+
+ <p align="center">
+1. In the pfsense interface go to firewall > click rules. Note there arent any firewall rules by default as a precaution.  <br/>
+<img src=".png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+<br />
+<br />
+2.  create a rule to block a Security Blue Team-owned domain, Redhunt.net. Open a command prompt on your Windows system, or a terminal on a Kali Linux virtual machine, and type ping redhunt.net. You can instantly press CTRL+C to stop pinging. You now have the IP address of Redhunt.net!
+<img src=".png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+<br />
+<br /> 
+ 3.Now go back to the top of the pfsense interface and go to filewall>Alias. Aliases act as placeholders for real hosts, networks or ports. They can be used to minimize the number of changes that have to be made if a host, network or port changes. For example, if we create an Alias for a site we want to block, we can use that as the source or destination within firewall rules. If the IP of the site changes, we only need to change the Alias instead of every single rule. In the below screenshot we have set a name and the IP address of redhunt.net.
+  <img src=".png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+<br />
+<br /> 
+4. Create a firewall rule that will block  any host in our network connecting to the redhunt.net! Just follow the below set up and save.
+5. Action: Block – we want to block traffic to Redhunt.net
+Protocol: Any – we want to block all traffic (alternatively, we could choose to just block http (TCP 80) and https (TCP 443)).
+Source: Network, 192.168.1.0/24 – we want to enforce this rule for any system on our private home network.
+Destination: Single host or alias, RedHuntDOTNet (the alias we created earlier for the IP address of the website).
+ 
+
+Before we change our host system’s default gateway, pushing all of our traffic through pfSense, we need to think about how the firewall is currently constructed. All traffic is blocked by default with pfSense, so technically, we have two rules at the moment:
+
+Block ANY traffic to Redhunt.net (3.11.197.46)
+Block ANY traffic
+ 
+
+So if we change the default gateway on our host system, we will have absolutely no internet connection, because pfSense is blocking everything. We need to create something known as an ALLOW ALL rule. This might sound scary, but remember that your host is (or should be) running a local web application firewall, which will still work to block malicious traffic. This rule means that pfSense allows communications to come in and out from the internet, giving us a connection.
+
+ 
+
+Firewalls follow a hierarchy when it comes to rules, working from the top down. This means pfSense will inspect the traffic and apply the rules in the following order:
+
+1. Firewall sees that Redhunt.net is blocked. If the packet is attempting to reach out to 3.11.197.46, drop the packet to prevent the connection.
+2. Firewall sees that all traffic is allowed.
+
+6. Now lets create a allow rule. You can follow the settings below.
