@@ -148,7 +148,8 @@ Download Oracle Virtual Box. Choose Appropriate Platform Packages (necessary for
  <img src="https://imgur.com/FE89Cxg.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
  <img src="https://imgur.com/cLadsMK.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
-<br /> 
+<br />
+<p align="center">
 10. Now Restart the VM.
    <img src="https://imgur.com/RBN2RnI.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
    <br />
