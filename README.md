@@ -209,38 +209,42 @@ Download Oracle Virtual Box. Choose Appropriate Platform Packages (necessary for
 <img src="https://imgur.com/tgsFlNQ.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
 <br />
 <br />
-2. Now we will create a rule to block the domain, Youtube.com. (Note: We can choose any domain for this exercise) Next open a Command Prompt as Admin on your Windows system, or a terminal on a Kali Linux virtual machine, and type ping Youtube.com. You can instantly press CTRL+C to stop pinging. You now have the IP address of Youtube.com please note it
+2. Now we will create a rule to block the domain, Youtube.com. (Note: We can choose any domain for this exercise) Next open a Command Prompt as Admin on your Windows system, or a terminal on a Kali Linux virtual machine, and type ping Youtube.com. You can instantly press CTRL+C to stop pinging. You now have the IP address of Youtube.com please note it. (142.250.80.14)
 <img src="https://imgur.com/S3DouQx.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
 <br />
 <br /> 
- 3.Now go back to the top of the pfsense interface and go to filewall>Alias. Aliases act as placeholders for real hosts, networks or ports. They can be used to minimize the number of changes that have to be made if a host, network or port changes. For example, if we create an Alias for a site we want to block, we can use that as the source or destination within firewall rules. If the IP of the site changes, we only need to change the Alias instead of every single rule. In the below screenshot we have set a name and the IP address of redhunt.net.
+ 3. Now go back to the top of the pfsense interface and go to Firewall > Alias. Aliases acts as placeholders for real hosts, networks or ports. They can be used to minimize the number of changes that have to be made if a host, network or port changes. For example, if we create an Alias for a site we want to block, we can use that as the source or destination within firewall rules. If the IP of the site changes, we only need to change the Alias instead of every single rule. In the below screenshot we have set a name and the IP address of Youtube.com.
   <img src=".png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
 <br />
 <br /> 
-4. Create a firewall rule that will block  any host in our network connecting to the redhunt.net! Just follow the below set up and save.
-5. Action: Block – we want to block traffic to Redhunt.net
-Protocol: Any – we want to block all traffic (alternatively, we could choose to just block http (TCP 80) and https (TCP 443)).
-Source: Network, 192.168.1.0/24 – we want to enforce this rule for any system on our private home network.
-Destination: Single host or alias, RedHuntDOTNet (the alias we created earlier for the IP address of the website).
+4. Next lets create a firewall rule that will block any host in our network connecting to YouTube.com. Follow the below set up and save.
+Explanation of values:<br />
+<strong>Action:</strong> Block – we want to block traffic to Redhunt.net <br />
+<strong>Protocol:</strong> Any – we want to block all traffic (alternatively, we could choose to just block http (TCP 80) and https (TCP 443)).<br />
+<strong>Source:</strong> Network, 192.168.1.0/24 – we want to enforce this rule for any system on our private home network.<br />
+<strong>Destination:</strong> Single host or alias, YoutubeDOTCom (the alias we created earlier for the IP address of the website).<br />
+   <img src=".png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+<br />
+<br />    
+Note: So far the Firewall is currently constructed, we have all traffic iblocked by default with pfSense, so therefore we have two rules.<br />
+Block ANY traffic to Youtube.com (142.250.80.14)<br />
+Block ANY traffic <br />
  
 
-Before we change our host system’s default gateway, pushing all of our traffic through pfSense, we need to think about how the firewall is currently constructed. All traffic is blocked by default with pfSense, so technically, we have two rules at the moment:
+Note: If we change the default gateway on our host system, we will have absolutely no internet connection, because pfSense is blocking everything. We need to create something known as an ALLOW ALL rule. Remember that your host is  running a local web application firewall, which will still work to block malicious traffic. This rule means that pfSense allows communications to come in and out from the internet, giving us a connection. <br />
+Note: Firewalls follow a hierarchy when it comes to rules, working from the top down. This means pfSense will inspect the traffic and apply the rules in the following order: <br />
+1. Firewall sees that Redhunt.net is blocked. If the packet is attempting to reach out to 3.11.197.46, drop the packet to prevent the connection. <br />
+2. Firewall sees that all traffic is allowed. <br />
 
-Block ANY traffic to Redhunt.net (3.11.197.46)
-Block ANY traffic
- 
-
-So if we change the default gateway on our host system, we will have absolutely no internet connection, because pfSense is blocking everything. We need to create something known as an ALLOW ALL rule. This might sound scary, but remember that your host is (or should be) running a local web application firewall, which will still work to block malicious traffic. This rule means that pfSense allows communications to come in and out from the internet, giving us a connection.
-
- 
-
-Firewalls follow a hierarchy when it comes to rules, working from the top down. This means pfSense will inspect the traffic and apply the rules in the following order:
-
-1. Firewall sees that Redhunt.net is blocked. If the packet is attempting to reach out to 3.11.197.46, drop the packet to prevent the connection.
-2. Firewall sees that all traffic is allowed.
-
-6. Now lets create a allow rule. You can follow the settings below.
-7. Be sure to make sure the allow rule  is placed below the redhunt.net blocking rule, otherwise when we change our default gateway, you’re going to lose internet connection until you restore it.
+5. Create a allow rule. Follow the settings below.<br />
+Note: Make sure the allow rule is placed below the Youtube.com blocking rule, when the we change the default gateway we will lose our internet connection until it is restored.
+   <img src=".png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+<br />
+<br />  
+6. Be sure to click Apply Changes.
+     <img src=".png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+<br />
+<br />
 8.  What we need to do is:
 
 Tell our host system to use the pfSense virtual machine (192.168.1.251) as its default gateway. Traffic outbound for the internet will now go to pfSense.
