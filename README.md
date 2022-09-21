@@ -150,6 +150,7 @@ Download Oracle Virtual Box. Choose Appropriate Platform Packages (necessary for
 <br />
 <br /> 
 10. Now Restart the VM.
+   <img src="https://imgur.com/RBN2RnI.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
    <br />
 <br /> 
 11. Choose option 1 and when asked “Should VLANs be set up now?” type “n”.
