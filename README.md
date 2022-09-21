@@ -205,12 +205,12 @@ Download Oracle Virtual Box. Choose Appropriate Platform Packages (necessary for
 
 
  <p align="center">
-1. In the pfsense interface go to firewall > click rules. Note there arent any firewall rules by default as a precaution.  <br/>
-<img src=".png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+1. In the pfsense interface go to Firewall > click Rules. (Note: There arent any firewall rules by default as a precaution.)  <br/>
+<img src="https://imgur.com/tgsFlNQ.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
 <br />
 <br />
-2.  create a rule to block a Security Blue Team-owned domain, Redhunt.net. Open a command prompt on your Windows system, or a terminal on a Kali Linux virtual machine, and type ping redhunt.net. You can instantly press CTRL+C to stop pinging. You now have the IP address of Redhunt.net!
-<img src=".png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+2. Now we will create a rule to block the domain, Youtube.com. (Note: We can choose any domain for this exercise) Next open a Command Prompt as Admin on your Windows system, or a terminal on a Kali Linux virtual machine, and type ping Youtube.com. You can instantly press CTRL+C to stop pinging. You now have the IP address of Youtube.com please note it
+<img src="https://imgur.com/S3DouQx.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
 <br />
 <br /> 
  3.Now go back to the top of the pfsense interface and go to filewall>Alias. Aliases act as placeholders for real hosts, networks or ports. They can be used to minimize the number of changes that have to be made if a host, network or port changes. For example, if we create an Alias for a site we want to block, we can use that as the source or destination within firewall rules. If the IP of the site changes, we only need to change the Alias instead of every single rule. In the below screenshot we have set a name and the IP address of redhunt.net.
