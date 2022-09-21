@@ -32,7 +32,7 @@ Packet filtering firewalls operate inline at junction points where devices such 
 4. Access control lists can be difficult to set up and manage. <br />
 <br />
 <strong>2. Circuit-Level Gateway </strong><br />
-Using another relatively quick way to identify malicious content, circuit-level gateways monitor TCP handshakes and other network protocol session initiation messages across the network as they are established between the local and remote hosts to determine whether the session being initiated is legitimate -- whether the remote system is considered trusted. They don't inspect the packets themselves, however.
+Using another relatively quick way to identify malicious content, circuit-level gateways monitor TCP handshakes and other network protocol session initiation messages across the network as they are established between the local and remote hosts to determine whether the session being initiated is legitimate -- whether the remote system is considered trusted. They don't inspect the packets themselves, however.<br />
 <strong>Circuit-Level Gateway Advantages:</strong><br />
 1. Only processes requested transactions; all other traffic is rejected. <br />
 2. Easy to set up and manage. <br />
