@@ -240,3 +240,13 @@ Firewalls follow a hierarchy when it comes to rules, working from the top down. 
 2. Firewall sees that all traffic is allowed.
 
 6. Now lets create a allow rule. You can follow the settings below.
+7. Be sure to make sure the allow rule  is placed below the redhunt.net blocking rule, otherwise when we change our default gateway, you’re going to lose internet connection until you restore it.
+8.  What we need to do is:
+
+Tell our host system to use the pfSense virtual machine (192.168.1.251) as its default gateway. Traffic outbound for the internet will now go to pfSense.
+Tell our pfSense VM to use the router (192.168.1.254) as its default gateway, giving it internet connectivity.
+ 
+9. Next it’s time to update the settings for our host. In the Windows search bar, type “run” and press enter. The following popup will display.
+10. Enter in “ncpa.cpl” and press enter. You should see something similar to the below screenshot. Our ethernet network connection is shown in the top right, as GardenNET.
+11.Right-click on your primary connection, and select “Properties”. Find the line that reads “Internet Protocol Version 4”, and double left-click to open a new window, shown below. Here we can change from “obtain an IP address automatically” and “obtain DNS server address automatically” to set the values we need from our pfSense system. We have shown the before and after screenshots below. We will also explain what we’ve done underneath these images.
+ 12. Right-click on your primary connection, and select “Properties”. Find the line that reads “Internet Protocol Version 4”, and double left-click to open a new window, shown below. Here we can change from “obtain an IP address automatically” and “obtain DNS server address automatically” to set the values we need from our pfSense system. We have shown the before and after screenshots below. We will also explain what we’ve done underneath these images.
