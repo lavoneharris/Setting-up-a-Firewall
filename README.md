@@ -100,19 +100,18 @@ Firewalls have been a first line of defense in network security for over 25 year
 We will be using a virtual machine that will act as Firewall <br/>
   <br/>
   <br/>
- 1. Head to the pfSense website and download the pfSense Community Edition the ISO file in the below picture. Link:https://www.pfsense.org/download/<br/>
+ 1. Head to the pfSense website and download the pfSense Community Edition the ISO file in the below picture. Link: https://www.pfsense.org/download/<br/>
 <img src="https://imgur.com/T1Aosof.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
 <br />
 <br />
  <p align="center">
-2. Once the .iso.gz file is downloaded we will need to unzip it using 7 Zip File Manager to access the .iso file .  <br/>
+2. Once the .iso.gz file is downloaded, we will need to extract it using 7 Zip File Manager to access the .iso file.  <br/>
 <img src="https://imgur.com/LO2LAUP.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
 <img src="https://imgur.com/oKtsFG1.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
 <img src="https://imgur.com/3hgqElk.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
-<img src="192,195,194,193.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
 <br />
 <br />
-Download Oracle Virtual Box. Choose Appropriate Platform Packages. Link:https://virtualbox.org/wiki/Downloads  <br/>
+Download Oracle Virtual Box. Choose Appropriate Platform Packages (necessary for your environment). Link:https://virtualbox.org/wiki/Downloads  <br/>
 <img src="https://imgur.com/uWG2WwF.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
 <br />
@@ -120,7 +119,7 @@ Download Oracle Virtual Box. Choose Appropriate Platform Packages. Link:https://
 <img src="https://imgur.com/a8VV8Zu.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
 <br /> 
- 4. Name the Vitual Machine, Make the type BSD and set version to FreeBSD 64 bit. We can set the Memory Size to default 1024 MB. Set option of Hard Disk to Create Virtual Disk Now.-> Create
+ 4. Give the Vitual Machine a name,set the type BSD, set version to FreeBSD 64 bit. We can set the Memory Size to default 1024 MB. Lastly set option of Hard Disk to Create Virtual Disk Now.-> Create
  <img src="https://imgur.com/7bnOG2C.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
 <br /> 
@@ -133,8 +132,7 @@ Download Oracle Virtual Box. Choose Appropriate Platform Packages. Link:https://
     <img src="https://imgur.com/4S8LKXz.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
 <br /> 
- 7. Run the Firewall Lab by double clicking it to run. A window to setup the .iso disk we want to use will appear we will choose pfsense file we downloaded earlier. 
-
+ 7. Run the Firewall Lab by double clicking it to run. A window to setup the .iso disk we want to use will appear, we will choose pfsense file we downloaded and extracted earlier. 
   <img src="https://imgur.com/05DYmN6.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
 <br /> 
@@ -146,26 +144,25 @@ Download Oracle Virtual Box. Choose Appropriate Platform Packages. Link:https://
 <br />
 <br /> 
 <br /> 
-9. Once the installation is done we will have to shut down the virtual machine. Not doing so would make the VM to run the installer again. To stop this, we need to open the Oracle VirtualbOX Firewall virtual machine settings and remove the .iso file we used for installation. 
+9. Once the installation is done we will have to shut down the virtual machine. (Note: Not doing so would make the VM to run the installer again.) To stop this, we need to open the Oracle VirtualbOX Firewall virtual machine settings and remove the .iso file we used for installation. 
  <img src="https://imgur.com/FE89Cxg.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
  <img src="https://imgur.com/cLadsMK.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
 <br /> 
-10. Restart the Vm.
-11. select option 1 and when asked “Should VLANs be set up now?” type “n”.
+10. Now Restart the VM.
+11. Choose option 1 and when asked “Should VLANs be set up now?” type “n”.
   <img src="https://imgur.com/UPQw36X.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
 <br /> 
-12. enter a WAN interface name, enter “em0”, and when asked to enter the LAN interface name, don’t enter anything and press Enter. When asked to remove the LAN IP address, type “y”.
+12. <br /> Step 1: Enter a WAN interface name.<br /> Step 2: Enter “em0”, and when asked to enter the LAN interface name, don’t enter anything and press Enter. <br /> Step 3: When asked to remove the LAN IP address, type “y”.
       <img src="https://imgur.com/YJqjB2p.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
-
 <br />
 <br /> 
-   13. Note the IP address for pfsense ”.
+   13. Note the IP address for pfsense.
       <img src="https://imgur.com/SJpvAmf.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
 <br /> 
-   14. Enter the IP address into your host system in your web broswer to get pfsense login portal.Use the username:admin and the password:pfsense to log into the management console.
+   14. Enter the IP address into your host system in your web broswer to get to the pfsense login portal.U se the username:admin and the password:pfsense to log into the management console.
       <img src="https://imgur.com/9aRvMHs.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
 <br /> 
