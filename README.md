@@ -2,7 +2,7 @@
 
 
 <h2>Description</h2>
-This Firewall Lab consist of new VM on Oracle Virtual Box,that will act as firewall. We will both create a firewall and set up rules for the firewall that will block a specific IP address. 
+This Firewall Lab consist of new VM on Oracle Virtual Box, that will act as firewall. We will both create a firewall and set up rules for the firewall that will block a specific IP address. 
 
 
 <br />
@@ -119,7 +119,7 @@ Download Oracle Virtual Box. Choose Appropriate Platform Packages (necessary for
 <img src="https://imgur.com/a8VV8Zu.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
 <br /> 
- 4. Give the Vitual Machine a name,set the type BSD, set version to FreeBSD 64 bit. We can set the Memory Size to default 1024 MB. Lastly set option of Hard Disk to Create Virtual Disk Now.-> Create
+ 4. Give the Virtual Machine a name, set the type BSD, set version to FreeBSD 64 bit. We can set the Memory Size to default 1024 MB. Lastly set option of Hard Disk to Create Virtual Disk Now.-> Create
  <img src="https://imgur.com/7bnOG2C.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
 <br /> 
@@ -127,7 +127,7 @@ Download Oracle Virtual Box. Choose Appropriate Platform Packages (necessary for
   <img src="https://imgur.com/eD3f4tO.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
 <br /> 
- 6. Go to settings icon of the Firewall Lab. We set the the VM to Bridge Network mode to ensure the system has its own IP address vs sharing its IP with my host machine. In Network Tab set Attached to: Bridged Adpater. 
+ 6. Go to settings icon of the Firewall Lab. We set the the VM to Bridge Network mode to ensure the system has its own IP address vs sharing its IP with my host machine. In Network Tab set Attached to: Bridged Adapter. 
   <img src="https://imgur.com/RBN2RnI.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
     <img src="https://imgur.com/4S8LKXz.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
@@ -136,7 +136,7 @@ Download Oracle Virtual Box. Choose Appropriate Platform Packages (necessary for
   <img src="https://imgur.com/05DYmN6.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
 <br /> 
- 8. Follow the steps to insall pfsense.
+ 8. Follow the steps to install pfsense.
       <img src="https://imgur.com/bFp1LU4.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
       <img src="https://imgur.com/V7pUXia.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
       <img src="https://imgur.com/fuSn8B6.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
@@ -144,7 +144,7 @@ Download Oracle Virtual Box. Choose Appropriate Platform Packages (necessary for
 <br />
 <br /> 
 <br /> 
-9. Once the installation is done we will have to shut down the virtual machine. (Note: Not doing so would make the VM to run the installer again.) To stop this, we need to open the Oracle VirtualbOX Firewall virtual machine settings and remove the .iso file we used for installation. 
+9. Once the installation is done we will have to shut down the virtual machine. (Note: Not doing so would make the VM to run the installer again.) To stop this, we need to open the Oracle Virtualbox Firewall virtual machine settings and remove the .iso file we used for installation. 
  <img src="https://imgur.com/FE89Cxg.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
  <img src="https://imgur.com/cLadsMK.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
@@ -167,7 +167,7 @@ Download Oracle Virtual Box. Choose Appropriate Platform Packages (necessary for
       <img src="https://imgur.com/SJpvAmf.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
 <br /> 
-   14. Enter the IP address into your host system in your web broswer to get to the pfsense login portal.U se the username:admin and the password:pfsense to log into the management console.
+   14. Enter the IP address into your host system in your web browser to get to the pfsense login portal.U se the username: admin and the password: pfsense to log into the management console.
       <img src="https://imgur.com/9aRvMHs.png" height="80%" width="80%" alt="Download Oracle Virtual Box"/>
 <br />
 <br /> 
@@ -205,7 +205,7 @@ Download Oracle Virtual Box. Choose Appropriate Platform Packages (necessary for
 
 
  <p align="center">
-1. In the pfsense interface go to Firewall > click Rules. (Note: There arent any firewall rules by default as a precaution.)  <br/>
+1. In the pfsense interface go to Firewall > click Rules. (Note: There are not any firewall rules by default as a precaution.)  <br/>
 <img src="https://imgur.com/tgsFlNQ.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
 <br />
 <br />
@@ -219,7 +219,7 @@ Download Oracle Virtual Box. Choose Appropriate Platform Packages (necessary for
     <img src="https://imgur.com/bAjPgwv.png" height="80%" width="80%" alt="252"/>
 <br />
 <br /> 
-4. Next lets create a firewall rule that will block any host in our network connecting to YouTube.com. Follow the below set up and save.
+4. Next let's create a firewall rule that will block any host in our network connecting to YouTube.com. Follow the below set up and save.
 Explanation of values:<br />
 <strong>Action:</strong> Block – we want to block traffic to Youtube.com <br />
 <strong>Protocol:</strong> Any – we want to block all traffic (alternatively, we could choose to just block http (TCP 80) and https (TCP 443)).<br />
@@ -228,7 +228,7 @@ Explanation of values:<br />
    <img src="https://imgur.com/dL4I8ow.png" height="80%" width="80%" alt="253"/>
 <br />
 <br />    
-Note: So far the Firewall is currently constructed, we have all traffic iblocked by default with pfSense, so therefore we have two rules.<br />
+Note: So far the Firewall is currently constructed, we have all traffic blocked by default with pfSense, so therefore we have two rules.<br />
 Block ANY traffic to Youtube.com (142.250.80.14)<br />
 Block ANY traffic <br />
  
@@ -295,7 +295,7 @@ Diagram of what it should look like:<br />
     <img src="https://imgur.com/nhCz5PM.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
   <br />
   <br />
- 13. Now lets try and go Youtube.Com if sucessful we should not be able to reach the address meaning our Firewall was a success !
+ 13. Now lets try and go Youtube.Com if successful we should not be able to reach the address meaning our Firewall was a success !
       <img src="https://imgur.com/EPI4vwj.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
   <br />
   <br />
