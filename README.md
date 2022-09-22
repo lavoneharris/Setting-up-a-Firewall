@@ -235,8 +235,8 @@ Block ANY traffic <br />
 
 Note: If we change the default gateway on our host system, we will have absolutely no internet connection, because pfSense is blocking everything. We need to create something known as an ALLOW ALL rule. Remember that your host is  running a local web application firewall, which will still work to block malicious traffic. This rule means that pfSense allows communications to come in and out from the internet, giving us a connection. <br />
 Note: Firewalls follow a hierarchy when it comes to rules, working from the top down. This means pfSense will inspect the traffic and apply the rules in the following order: <br />
-1. Firewall sees that Youtube.com is blocked. If the packet is attempting to reach out to 142.250.80.14, drop the packet to prevent the connection. <br />
-2. Firewall sees that all traffic is allowed. <br />
+1a. Firewall sees that Youtube.com is blocked. If the packet is attempting to reach out to 142.250.80.14, drop the packet to prevent the connection. <br />
+2a. Firewall sees that all traffic is allowed. <br />
 
  <p align="center">
 5. Create a allow rule. Follow the settings below.<br />
@@ -257,8 +257,8 @@ Note: Make sure the allow rule is placed below the Youtube.com blocking rule, wh
 <br />
 <br />
 9. Our pfSense has the default gateway we assigned earlier, which is 192.168.1.1. Sometimes your router will sit at .1 in home networks, but in some cases, it is at .254. What you may need to do is:<br />
-1. Tell our host system to use the pfSense virtual machine (192.168.1.251) as its default gateway. Traffic outbound for the internet will now go to pfSense.<br />
-2. Tell our pfSense VM to use the router (192.168.1.254) as its default gateway, giving it internet connectivity.<br />
+1a. Tell our host system to use the pfSense virtual machine (192.168.1.251) as its default gateway. Traffic outbound for the internet will now go to pfSense.<br />
+2a. Tell our pfSense VM to use the router (192.168.1.254) as its default gateway, giving it internet connectivity.<br />
 Diagram of what it should look like:<br />
 <img src="https://imgur.com/7IIodSh.png" height="80%" width="80%" alt="u2"/>
   <br />
@@ -268,13 +268,16 @@ Diagram of what it should look like:<br />
   <br />
   <br />
   
+ <p align="center">
 11.  In the Windows 10 use the command Windows button + r  The following popup will display enter in “ncpa.cpl” and press enter. 
   You should see something similar to the below screenshot. Our ethernet network connection in this example is shown in the top right, as Keenetic=4693.
+   
+ <p align="center">
   <img src="https://imgur.com/QUUvEfE.png" height="80%" width="80%" alt="257"/>
    <img src="https://imgur.com/GgGi1AF.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
   <br />
   <br />
-12.Right-click on your primary connection, and select “Properties”. Find the line that reads “Internet Protocol Version 4”, and double left-click to open a new window, shown below. Here we can change from “obtain an IP address automatically” and “obtain DNS server address automatically” to set the values we need from our pfSense system. We have shown the before and after screenshots below.   <br />
+12. Right-click on your primary connection, and select “Properties”. Find the line that reads “Internet Protocol Version 4”, and double left-click to open a new window, shown below. Here we can change from “obtain an IP address automatically” and “obtain DNS server address automatically” to set the values we need from our pfSense system. We have shown the before and after screenshots below.   <br />
 <br />
   Before:
    <img src="https://imgur.com/skqFbY5.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
