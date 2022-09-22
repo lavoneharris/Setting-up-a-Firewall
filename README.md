@@ -221,7 +221,7 @@ Download Oracle Virtual Box. Choose Appropriate Platform Packages (necessary for
 <br /> 
 4. Next lets create a firewall rule that will block any host in our network connecting to YouTube.com. Follow the below set up and save.
 Explanation of values:<br />
-<strong>Action:</strong> Block – we want to block traffic to Redhunt.net <br />
+<strong>Action:</strong> Block – we want to block traffic to Youtube.com <br />
 <strong>Protocol:</strong> Any – we want to block all traffic (alternatively, we could choose to just block http (TCP 80) and https (TCP 443)).<br />
 <strong>Source:</strong> Network, 192.168.1.0/24 – we want to enforce this rule for any system on our private home network.<br />
 <strong>Destination:</strong> Single host or alias, YoutubeDOTCom (the alias we created earlier for the IP address of the website).<br />
@@ -235,11 +235,14 @@ Block ANY traffic <br />
 
 Note: If we change the default gateway on our host system, we will have absolutely no internet connection, because pfSense is blocking everything. We need to create something known as an ALLOW ALL rule. Remember that your host is  running a local web application firewall, which will still work to block malicious traffic. This rule means that pfSense allows communications to come in and out from the internet, giving us a connection. <br />
 Note: Firewalls follow a hierarchy when it comes to rules, working from the top down. This means pfSense will inspect the traffic and apply the rules in the following order: <br />
-1. Firewall sees that Redhunt.net is blocked. If the packet is attempting to reach out to 3.11.197.46, drop the packet to prevent the connection. <br />
+1. Firewall sees that Youtube.com is blocked. If the packet is attempting to reach out to 142.250.80.14, drop the packet to prevent the connection. <br />
 2. Firewall sees that all traffic is allowed. <br />
 
+ <p align="center">
 5. Create a allow rule. Follow the settings below.<br />
 Note: Make sure the allow rule is placed below the Youtube.com blocking rule, when the we change the default gateway we will lose our internet connection until it is restored.
+   
+ <p align="center">
    <img src="https://imgur.com/ZR0PA9i.png" height="80%" width="80%" alt="254"/>
     <img src="https://imgur.com/h6WGCpb.png" height="80%" width="80%" alt="D255"/>
 <br />
