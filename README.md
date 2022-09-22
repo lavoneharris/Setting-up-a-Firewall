@@ -265,19 +265,19 @@ Diagram of what it should look like:<br />
 11.  In the Windows 10 use the command Windows button + r  The following popup will display enter in “ncpa.cpl” and press enter. 
   You should see something similar to the below screenshot. Our ethernet network connection in this example is shown in the top right, as Keenetic=4693.
   <img src=".png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
-   <img src=".png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+   <img src="https://imgur.com/GgGi1AF.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
   <br />
   <br />
 11.Right-click on your primary connection, and select “Properties”. Find the line that reads “Internet Protocol Version 4”, and double left-click to open a new window, shown below. Here we can change from “obtain an IP address automatically” and “obtain DNS server address automatically” to set the values we need from our pfSense system. We have shown the before and after screenshots below.   <br />
 Before:
-   <img src=".png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+   <img src="https://imgur.com/skqFbY5.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
   <br />
   <br />
  After:
-    <img src=".png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+    <img src="https://imgur.com/nhCz5PM.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
   <br />
   <br />
  12. Now lets try and go Youtube.Com if sucessful we should not be able to reach the address meaning our Firewall was a success !
-      <img src=".png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+      <img src="https://imgur.com/EPI4vwj.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
   <br />
   <br />
