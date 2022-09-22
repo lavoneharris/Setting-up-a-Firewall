@@ -245,12 +245,39 @@ Note: Make sure the allow rule is placed below the Youtube.com blocking rule, wh
      <img src=".png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
 <br />
 <br />
-8.  What we need to do is:
-
-Tell our host system to use the pfSense virtual machine (192.168.1.251) as its default gateway. Traffic outbound for the internet will now go to pfSense.
-Tell our pfSense VM to use the router (192.168.1.254) as its default gateway, giving it internet connectivity.
- 
-9. Next it’s time to update the settings for our host. In the Windows search bar, type “run” and press enter. The following popup will display.
-10. Enter in “ncpa.cpl” and press enter. You should see something similar to the below screenshot. Our ethernet network connection is shown in the top right, as GardenNET.
-11.Right-click on your primary connection, and select “Properties”. Find the line that reads “Internet Protocol Version 4”, and double left-click to open a new window, shown below. Here we can change from “obtain an IP address automatically” and “obtain DNS server address automatically” to set the values we need from our pfSense system. We have shown the before and after screenshots below. We will also explain what we’ve done underneath these images.
- 12. Right-click on your primary connection, and select “Properties”. Find the line that reads “Internet Protocol Version 4”, and double left-click to open a new window, shown below. Here we can change from “obtain an IP address automatically” and “obtain DNS server address automatically” to set the values we need from our pfSense system. We have shown the before and after screenshots below. We will also explain what we’ve done underneath these images.
+8.  What we need to do is on our host system we need to gather our Ip address, Default Gateway, and DNS server. For example our host IP is 192.168.1.220, our default gateway to the internet is 192.168.1.254, and our DNS server is 192.168.1.254 (same as the gateway). The host is sending traffic from 192.168.1.220 to 192.168.1.254, then out to the internet. See diagram for example:
+      <img src="https://imgur.com/3e24IRk.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+      <img src=".png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+<br />
+<br />
+9. Our pfSense has the default gateway we assigned earlier, which is 192.168.1.1. Sometimes your router will sit at .1 in home networks, but in some cases, it is at .254. What you may need to do is:<br />
+1. Tell our host system to use the pfSense virtual machine (192.168.1.251) as its default gateway. Traffic outbound for the internet will now go to pfSense.<br />
+2. Tell our pfSense VM to use the router (192.168.1.254) as its default gateway, giving it internet connectivity.<br />
+Diagram of what it should look like:<br />
+<img src=".png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+  <br />
+  <br />
+10. Go in pfSense and change the default gateway in pfSense from 192.168.1.1 to the correct value, 192.168.1.254. Click Add New Gateway. 
+  <img src=".png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+  <br />
+  <br />
+  
+11.  In the Windows 10 use the command Windows button + r  The following popup will display enter in “ncpa.cpl” and press enter. 
+  You should see something similar to the below screenshot. Our ethernet network connection in this example is shown in the top right, as Keenetic=4693.
+  <img src=".png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+   <img src=".png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+  <br />
+  <br />
+11.Right-click on your primary connection, and select “Properties”. Find the line that reads “Internet Protocol Version 4”, and double left-click to open a new window, shown below. Here we can change from “obtain an IP address automatically” and “obtain DNS server address automatically” to set the values we need from our pfSense system. We have shown the before and after screenshots below.   <br />
+Before:
+   <img src=".png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+  <br />
+  <br />
+ After:
+    <img src=".png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+  <br />
+  <br />
+ 12. Now lets try and go Youtube.Com if sucessful we should not be able to reach the address meaning our Firewall was a success !
+      <img src=".png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+  <br />
+  <br />
