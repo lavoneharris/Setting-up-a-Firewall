@@ -214,9 +214,9 @@ Download Oracle Virtual Box. Choose Appropriate Platform Packages (necessary for
 <br />
 <br /> 
  3. Now go back to the top of the pfsense interface and go to Firewall > Alias. Aliases acts as placeholders for real hosts, networks or ports. They can be used to minimize the number of changes that have to be made if a host, network or port changes. For example, if we create an Alias for a site we want to block, we can use that as the source or destination within firewall rules. If the IP of the site changes, we only need to change the Alias instead of every single rule. In the below screenshot we have set a name and the IP address of Youtube.com.
-  <img src="250.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
-    <img src="251.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
-    <img src="252.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+  <img src="https://imgur.com/plqcWiF.png" height="80%" width="80%" alt="D250"/>
+    <img src="https://imgur.com/8dKJLgY.png" height="80%" width="80%" alt="D251"/>
+    <img src="https://imgur.com/bAjPgwv.png" height="80%" width="80%" alt="252"/>
 <br />
 <br /> 
 4. Next lets create a firewall rule that will block any host in our network connecting to YouTube.com. Follow the below set up and save.
@@ -225,7 +225,7 @@ Explanation of values:<br />
 <strong>Protocol:</strong> Any – we want to block all traffic (alternatively, we could choose to just block http (TCP 80) and https (TCP 443)).<br />
 <strong>Source:</strong> Network, 192.168.1.0/24 – we want to enforce this rule for any system on our private home network.<br />
 <strong>Destination:</strong> Single host or alias, YoutubeDOTCom (the alias we created earlier for the IP address of the website).<br />
-   <img src="253.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+   <img src="https://imgur.com/dL4I8ow.png" height="80%" width="80%" alt="253"/>
 <br />
 <br />    
 Note: So far the Firewall is currently constructed, we have all traffic iblocked by default with pfSense, so therefore we have two rules.<br />
@@ -240,24 +240,24 @@ Note: Firewalls follow a hierarchy when it comes to rules, working from the top 
 
 5. Create a allow rule. Follow the settings below.<br />
 Note: Make sure the allow rule is placed below the Youtube.com blocking rule, when the we change the default gateway we will lose our internet connection until it is restored.
-   <img src="254.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
-    <img src="255.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+   <img src="https://imgur.com/ZR0PA9i.png" height="80%" width="80%" alt="254"/>
+    <img src="https://imgur.com/h6WGCpb.png" height="80%" width="80%" alt="D255"/>
 <br />
 <br />  
 6. Be sure to click Apply Changes.
-     <img src="255.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+     <img src="https://imgur.com/h6WGCpb.png" height="80%" width="80%" alt="D255"/>
 <br />
 <br />
 8.  What we need to do is on our host system we need to gather our Ip address, Default Gateway, and DNS server. For example our host IP is 192.168.1.220, our default gateway to the internet is 192.168.1.254, and our DNS server is 192.168.1.254 (same as the gateway). The host is sending traffic from 192.168.1.220 to 192.168.1.254, then out to the internet. See diagram for example:
       <img src="https://imgur.com/3e24IRk.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
-      <img src="u1.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+      <img src="https://imgur.com/ZWztF01.png" height="80%" width="80%" alt="u1"/>
 <br />
 <br />
 9. Our pfSense has the default gateway we assigned earlier, which is 192.168.1.1. Sometimes your router will sit at .1 in home networks, but in some cases, it is at .254. What you may need to do is:<br />
 1. Tell our host system to use the pfSense virtual machine (192.168.1.251) as its default gateway. Traffic outbound for the internet will now go to pfSense.<br />
 2. Tell our pfSense VM to use the router (192.168.1.254) as its default gateway, giving it internet connectivity.<br />
 Diagram of what it should look like:<br />
-<img src="u2.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+<img src="https://imgur.com/7IIodSh.png" height="80%" width="80%" alt="u2"/>
   <br />
   <br />
 10. Go in pfSense and change the default gateway in pfSense from 192.168.1.1 to the correct value, 192.168.1.254. Click Add New Gateway. 
@@ -267,7 +267,7 @@ Diagram of what it should look like:<br />
   
 11.  In the Windows 10 use the command Windows button + r  The following popup will display enter in “ncpa.cpl” and press enter. 
   You should see something similar to the below screenshot. Our ethernet network connection in this example is shown in the top right, as Keenetic=4693.
-  <img src="257.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
+  <img src="https://imgur.com/QUUvEfE.png" height="80%" width="80%" alt="257"/>
    <img src="https://imgur.com/GgGi1AF.png" height="80%" width="80%" alt="Download Windows 10 ISO File"/>
   <br />
   <br />
