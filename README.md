@@ -2,7 +2,7 @@
 
 
 <h2>Description</h2>
-This Firewall Lab consist of new VM on Oracle Virtual Box, that will act as firewall. We will both create a firewall and set up rules for the firewall that will block a specific IP address. 
+This Firewall Lab consist of creating new VM on Oracle Virtual Box, that will act as firewall. We will both create a firewall and set up rules for the firewall that will block a specific IP address. 
 
 
 <br />
